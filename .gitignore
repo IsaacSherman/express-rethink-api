@@ -26,3 +26,14 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+
+node_modules
+.node*
+.npm*
+.vagrant*
+.DS*
+.forever*
+.cache*
+.bash*
+.mysql*
+.sudo*

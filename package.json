@@ -1,7 +1,7 @@
 {
   "name": "vagrant-express",
   "version": "0.1.0",
-  "description": "Easy provisioning to get your next Vagrant + Node.js Express project up and going.",
+  "description": "Easy provisioning to get your next Vagrant + Node.js Express.js project up and going.",
   "main": "server.js",
   "scripts": {
     "test": "node server.js"

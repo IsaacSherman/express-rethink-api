@@ -26,4 +26,8 @@ npm install node-gyp -g
 apt-get install node-gyp -y > /dev/null
 node-gyp -v
 
+echo "Installing Node.js application"
+
+npm install
+
 echo "All done - go and get started!"

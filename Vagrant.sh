@@ -26,6 +26,19 @@ npm install node-gyp -g
 apt-get install node-gyp -y > /dev/null
 node-gyp -v
 
+echo "Installing RethinkDB"
+
+apt-add-repository ppa:rethinkdb/ppa -y > /dev/null
+apt-get update -y > /dev/null
+apt-get install rethinkdb -y --force-yes
+cp /etc/rethinkdb/default.conf.sample /etc/rethinkdb/instances.d/vagrant.conf
+echo "" >> /etc/rethinkdb/instances.d/vagrant.conf
+echo "bind=all" >> /etc/rethinkdb/instances.d/vagrant.conf
+echo "http-port=9090" >> /etc/rethinkdb/instances.d/vagrant.conf
+echo "machine-name=vagrant" >> /etc/rethinkdb/instances.d/vagrant.conf
+echo "" >> /etc/rethinkdb/instances.d/vagrant.conf
+/etc/init.d/rethinkdb restart
+
 echo "Installing Node.js application"
 
 npm install

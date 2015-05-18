@@ -7,13 +7,13 @@ var bodyParser = require('body-parser');
 
 var http = require('http');
 
-var Models = require('./models.js')();
+var Config = require('./config.js')();
+
+var Models = require('./models.js')(Config);
 
 var app = express();
 
-//App Settings ======
-
-app.set('port', process.env.PORT || 8080);
+//App Middleware ======
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -38,10 +38,57 @@ app.use(function(req, res, next) {
 
 	app.use('/', routerExample);
 
+	//Test Route ===
+
+	var routerTest = express.Router();
+
+	routerTest.route('/')
+
+		.get(function(req, res) {
+			Models.Test.getAll(function(results) {
+				res.status(200).send(results)
+			})
+		})
+
+		.post(function(req, res) {
+			Models.Test.create({
+				name: req.param('name'),
+				title: req.param('title')
+			}, function(results) {
+				res.status(200).send(results)
+			})
+		});
+
+	routerTest.route('/:user_id')
+
+		.get(function(req, res) {
+			Models.Test.get(req.params.user_id, function(user) {
+				res.status(200).send(user)
+			})
+		})
+
+		.put(function(req, res) {
+			Models.Test.update(req.params.user_id, req.body, function(user) {
+				res.status(200).send(user)
+			})
+		})
+
+		.delete(function(req, res) {
+			Models.Test.delete(req.params.user_id, function(user) {
+				res.status(200).send(user)
+			})
+		});
+
+	app.use('/test', routerTest);
+
+//Starting our database first ======
+
+var exec = require('child_process').exec;
+
 //Starting our app ======
 
-app.listen(app.get('port'), function() {
+app.listen(Config.Express.port, function() {
 
-	console.log('Running on port ' + app.get('port'));
+	console.log('Running on port ' + Config.Express.port);
 
 });

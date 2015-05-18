@@ -1,44 +1,75 @@
 
-//Dependencies ======
+module.exports = function(Config) {
 
+	//Dependencies ======
 
+	var r = require('rethinkdb');
 
-//Helper functions ======
+	//Helper functions ======
 
-var connect = function(connected) {
+	var connect = function(connected) {
 
+		r.connect(Config.Rethink, function(err, connection) {
 
-};
+			if (err) { throw err; }
 
-//Model methods ======
+			connected(connection);
 
-var Models;
+		});
 
-Models = {
+	};
 
-	// ExampleCRUD: {
+	//Model methods ======
 
-	// 	create: function(args, success) {
+	var Models;
 
-	// 	},
+	Models = {
 
-	// 	retrieve: function(table1_id, success) {
+		Test: {
 
-	// 	},
+			create: function(args, success) {
+				connect(function(connection) {
+					r.table('users').insert(args).run(connection, function(err, results) {
+						if (success) { success(results) }
+					})
+				})
+			},
 
-	// 	update: function(table1_id, args, success) {
+			get: function(user_id, success) {
+				connect(function(connection) {
+					r.table('users').get(user_id).run(connection, function(err, results) {
+						if (success) { success(results) }
+					})
+				})
+			},
 
-	// 	},
+			getAll: function(success) {
+				connect(function(connection) {
+					r.table('users').run(connection, function(err, results) {
+						if (success) { success(results) }
+					})
+				})
+			},
 
-	// 	delete: function(table1_id, success) {
+			update: function(user_id, args, success) {
+				connect(function(connection) {
+					r.table('users').get(user_id).update(args).run(connection, function(err, results) {
+						if (success) { success(results) }
+					})
+				})
+			},
 
-	// 	}
+			delete: function(user_id, success) {
+				connect(function(connection) {
+					r.table('users').get(user_id).delete().run(connection, function(err, results) {
+						if (success) { success(results) }
+					})
+				})
+			}
 
-	// }
+		}
 
-};
-
-module.exports = function() {
+	};
 
 	return Models;
 

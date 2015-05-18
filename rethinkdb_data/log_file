@@ -1,0 +1,171 @@
+2015-05-17T17:30:19.468074499 0.020461s warn: Parent directory of log file (/home/vagrant/rethinkdb_data/log_file) could not be synced. (Invalid argument)
+2015-05-17T17:30:19.477396143 0.029783s info: Creating directory /home/vagrant/rethinkdb_data
+2015-05-17T17:30:19.480123548 0.032510s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/home/vagrant/rethinkdb_data' did not already exist.)
+2015-05-17T17:30:19.481351595 0.033739s info: Running rethinkdb 1.12.5-0ubuntu1~trusty (GCC 4.8.2)...
+2015-05-17T17:30:19.502564503 0.054967s info: Running on Linux 3.13.0-52-generic x86_64
+2015-05-17T17:30:19.503990147 0.056377s info: Using cache size of 100 MB
+2015-05-17T17:30:19.509527006 0.061922s warn: Cache size does not leave much memory for server and query overhead (available memory: 146 MB).
+2015-05-17T17:30:19.510358891 0.062872s warn: Cache size is very low and may impact performance.
+2015-05-17T17:30:19.510951327 0.063338s info: Loading data from directory /home/vagrant/rethinkdb_data
+2015-05-17T17:30:19.524122140 0.076509s warn: Failed to sync parent directory of "/home/vagrant/rethinkdb_data/tmp/metadata.create" (errno: 22 - Invalid argument). You may encounter data loss in case of a system failure. (Is the file located on a filesystem that doesn't support directory sync? e.g. VirtualBox shared folders)
+2015-05-17T17:30:19.526243286 0.078630s warn: Could not turn off filesystem caching for database file: "/home/vagrant/rethinkdb_data/tmp/metadata.create" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2015-05-17T17:30:19.538031751 0.090418s warn: Failed to sync parent directory of "/home/vagrant/rethinkdb_data/tmp/metadata.create" (errno: 22 - Invalid argument). You may encounter data loss in case of a system failure. (Is the file located on a filesystem that doesn't support directory sync? e.g. VirtualBox shared folders)
+2015-05-17T17:30:19.539242595 0.091629s warn: Could not turn off filesystem caching for database file: "/home/vagrant/rethinkdb_data/tmp/metadata.create" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2015-05-17T17:30:19.610811741 0.163199s warn: Failed to sync parent directory of "/home/vagrant/rethinkdb_data/metadata" (errno: 22 - Invalid argument). You may encounter data loss in case of a system failure. (Is the file located on a filesystem that doesn't support directory sync? e.g. VirtualBox shared folders)
+2015-05-17T17:30:19.618760287 0.171147s warn: Failed to sync parent directory of "/home/vagrant/rethinkdb_data/tmp/auth_metadata.create" (errno: 22 - Invalid argument). You may encounter data loss in case of a system failure. (Is the file located on a filesystem that doesn't support directory sync? e.g. VirtualBox shared folders)
+2015-05-17T17:30:19.620131990 0.172519s warn: Could not turn off filesystem caching for database file: "/home/vagrant/rethinkdb_data/tmp/auth_metadata.create" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2015-05-17T17:30:19.632492458 0.184879s warn: Failed to sync parent directory of "/home/vagrant/rethinkdb_data/tmp/auth_metadata.create" (errno: 22 - Invalid argument). You may encounter data loss in case of a system failure. (Is the file located on a filesystem that doesn't support directory sync? e.g. VirtualBox shared folders)
+2015-05-17T17:30:19.633630236 0.186017s warn: Could not turn off filesystem caching for database file: "/home/vagrant/rethinkdb_data/tmp/auth_metadata.create" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2015-05-17T17:30:19.648800946 0.201188s warn: Failed to sync parent directory of "/home/vagrant/rethinkdb_data/auth_metadata" (errno: 22 - Invalid argument). You may encounter data loss in case of a system failure. (Is the file located on a filesystem that doesn't support directory sync? e.g. VirtualBox shared folders)
+2015-05-17T17:30:19.659942819 0.212329s info: Listening for intracluster connections on port 29015
+2015-05-17T17:30:19.664933792 0.217320s info: Listening for client driver connections on port 28015
+2015-05-17T17:30:19.665904817 0.218291s info: Listening for administrative HTTP connections on port 8080
+2015-05-17T17:30:19.665908663 0.218295s info: Listening on addresses: 127.0.0.1, ::1
+2015-05-17T17:30:19.665909071 0.218296s info: To fully expose RethinkDB on the network, bind to all addresses
+2015-05-17T17:30:19.665911776 0.218298s info: by running rethinkdb with the `--bind all` command line option.
+2015-05-17T17:30:19.665971476 0.218358s info: Server ready
+2015-05-17T17:30:37.918920565 18.471307s info: Server got SIGINT from pid 0, uid 0; shutting down...
+2015-05-17T17:30:37.920513544 18.472900s info: Shutting down client connections...
+2015-05-17T17:30:37.927426820 18.479841s info: All client connections closed.
+2015-05-17T17:30:37.927483233 18.479892s info: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2015-05-17T17:30:37.927529743 18.480044s info: Storage engine shut down.
+2015-05-17T17:34:46.837072376 0.032330s warn: Parent directory of log file (/home/vagrant/rethinkdb_data/log_file) could not be synced. (Invalid argument)
+2015-05-17T17:34:46.850107917 0.045366s info: Running rethinkdb 1.12.5-0ubuntu1~trusty (GCC 4.8.2)...
+2015-05-17T17:34:46.872957008 0.068217s info: Running on Linux 3.13.0-52-generic x86_64
+2015-05-17T17:34:46.874974961 0.070233s info: Using cache size of 100 MB
+2015-05-17T17:34:46.876210043 0.071468s warn: Cache size does not leave much memory for server and query overhead (available memory: 145 MB).
+2015-05-17T17:34:46.877068601 0.072326s warn: Cache size is very low and may impact performance.
+2015-05-17T17:34:46.877904069 0.073162s info: Loading data from directory /home/vagrant/rethinkdb_data
+2015-05-17T17:34:46.897442714 0.092700s warn: Failed to sync parent directory of "/home/vagrant/rethinkdb_data/metadata" (errno: 22 - Invalid argument). You may encounter data loss in case of a system failure. (Is the file located on a filesystem that doesn't support directory sync? e.g. VirtualBox shared folders)
+2015-05-17T17:34:46.899147606 0.094405s warn: Could not turn off filesystem caching for database file: "/home/vagrant/rethinkdb_data/metadata" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2015-05-17T17:34:47.192135580 0.387393s warn: Failed to sync parent directory of "/home/vagrant/rethinkdb_data/auth_metadata" (errno: 22 - Invalid argument). You may encounter data loss in case of a system failure. (Is the file located on a filesystem that doesn't support directory sync? e.g. VirtualBox shared folders)
+2015-05-17T17:34:47.193221571 0.388479s warn: Could not turn off filesystem caching for database file: "/home/vagrant/rethinkdb_data/auth_metadata" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2015-05-17T17:34:47.239545760 0.434803s info: Listening for intracluster connections on port 29015
+2015-05-17T17:34:47.243375444 0.438633s info: Listening for client driver connections on port 28015
+2015-05-17T17:34:47.243583599 0.438841s info: Listening for administrative HTTP connections on port 8080
+2015-05-17T17:34:47.245612289 0.440870s info: Listening on addresses: 127.0.0.1, 192.168.10.10, 10.0.2.15, ::1, fe80::a00:27ff:fe92:c5f7%2
+2015-05-17T17:34:47.245613924 0.440871s info: Server ready
+2015-05-17T17:36:47.800835205 120.996093s info: Server got SIGINT from pid 0, uid 0; shutting down...
+2015-05-17T17:36:47.802386764 120.997644s info: Shutting down client connections...
+2015-05-17T17:36:47.803507844 120.998765s info: All client connections closed.
+2015-05-17T17:36:47.803509786 120.998767s info: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2015-05-17T17:36:47.803511165 120.998769s info: Storage engine shut down.
+2015-05-17T17:43:06.446062117 0.043631s warn: Parent directory of log file (/home/vagrant/rethinkdb_data/log_file) could not be synced. (Invalid argument)
+2015-05-17T17:43:06.937002989 0.534571s info: Running rethinkdb 1.12.5-0ubuntu1~trusty (GCC 4.8.2)...
+2015-05-17T17:43:06.992171166 0.589752s info: Running on Linux 3.13.0-52-generic x86_64
+2015-05-17T17:43:06.992830722 0.590409s info: Using cache size of 100 MB
+2015-05-17T17:43:06.993787385 0.591356s warn: Cache size does not leave much memory for server and query overhead (available memory: 123 MB).
+2015-05-17T17:43:06.994632730 0.592202s warn: Cache size is very low and may impact performance.
+2015-05-17T17:43:06.995774838 0.593344s info: Loading data from directory /home/vagrant/rethinkdb_data
+2015-05-17T17:43:07.019604286 0.617173s warn: Failed to sync parent directory of "/home/vagrant/rethinkdb_data/metadata" (errno: 22 - Invalid argument). You may encounter data loss in case of a system failure. (Is the file located on a filesystem that doesn't support directory sync? e.g. VirtualBox shared folders)
+2015-05-17T17:43:07.020189877 0.617758s warn: Could not turn off filesystem caching for database file: "/home/vagrant/rethinkdb_data/metadata" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2015-05-17T17:43:07.060337226 0.657906s warn: Failed to sync parent directory of "/home/vagrant/rethinkdb_data/auth_metadata" (errno: 22 - Invalid argument). You may encounter data loss in case of a system failure. (Is the file located on a filesystem that doesn't support directory sync? e.g. VirtualBox shared folders)
+2015-05-17T17:43:07.060623977 0.658192s warn: Could not turn off filesystem caching for database file: "/home/vagrant/rethinkdb_data/auth_metadata" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2015-05-17T17:43:07.098182588 0.695751s info: Listening for intracluster connections on port 29015
+2015-05-17T17:43:07.115181173 0.712750s info: Listening for client driver connections on port 28015
+2015-05-17T17:43:07.116719568 0.714288s info: Listening for administrative HTTP connections on port 8080
+2015-05-17T17:43:07.120840199 0.718409s info: Listening on addresses: 127.0.0.1, 192.168.10.10, 10.0.2.15, ::1, fe80::a00:27ff:fe92:c5f7%2
+2015-05-17T17:43:07.120841970 0.718410s info: Server ready
+2015-05-17T17:45:51.029281032 0.040471s warn: Parent directory of log file (/home/vagrant/rethinkdb_data/log_file) could not be synced. (Invalid argument)
+2015-05-17T17:45:51.043708903 0.054899s info: Running rethinkdb 1.12.5-0ubuntu1~trusty (GCC 4.8.2)...
+2015-05-17T17:45:51.101631441 0.112824s info: Running on Linux 3.13.0-52-generic x86_64
+2015-05-17T17:45:51.102230684 0.113420s info: Using cache size of 100 MB
+2015-05-17T17:45:51.102728676 0.113918s warn: Cache size does not leave much memory for server and query overhead (available memory: 248 MB).
+2015-05-17T17:45:51.102978750 0.114168s warn: Cache size is very low and may impact performance.
+2015-05-17T17:45:51.103199285 0.114389s info: Loading data from directory /home/vagrant/rethinkdb_data
+2015-05-17T17:45:51.141903406 0.153113s warn: Failed to sync parent directory of "/home/vagrant/rethinkdb_data/metadata" (errno: 22 - Invalid argument). You may encounter data loss in case of a system failure. (Is the file located on a filesystem that doesn't support directory sync? e.g. VirtualBox shared folders)
+2015-05-17T17:45:51.142507282 0.153709s warn: Could not turn off filesystem caching for database file: "/home/vagrant/rethinkdb_data/metadata" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2015-05-17T21:15:26.683298554 0.027644s warn: Parent directory of log file (/home/vagrant/rethinkdb_data/log_file) could not be synced. (Invalid argument)
+2015-05-17T21:15:26.693622417 0.037967s info: Running rethinkdb 1.12.5-0ubuntu1~trusty (GCC 4.8.2)...
+2015-05-17T21:15:26.727909929 0.072261s info: Running on Linux 3.13.0-52-generic x86_64
+2015-05-17T21:15:26.743232216 0.087587s info: Using cache size of 100 MB
+2015-05-17T21:15:26.745646486 0.089992s warn: Cache size does not leave much memory for server and query overhead (available memory: 280 MB).
+2015-05-17T21:15:26.750844567 0.095190s warn: Cache size is very low and may impact performance.
+2015-05-17T21:15:26.755677567 0.100042s info: Loading data from directory /home/vagrant/rethinkdb_data
+2015-05-17T21:15:26.779670747 0.124016s warn: Failed to sync parent directory of "/home/vagrant/rethinkdb_data/metadata" (errno: 22 - Invalid argument). You may encounter data loss in case of a system failure. (Is the file located on a filesystem that doesn't support directory sync? e.g. VirtualBox shared folders)
+2015-05-17T21:15:26.781604945 0.125950s warn: Could not turn off filesystem caching for database file: "/home/vagrant/rethinkdb_data/metadata" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2015-05-17T21:15:26.806286029 0.150638s warn: Failed to sync parent directory of "/home/vagrant/rethinkdb_data/auth_metadata" (errno: 22 - Invalid argument). You may encounter data loss in case of a system failure. (Is the file located on a filesystem that doesn't support directory sync? e.g. VirtualBox shared folders)
+2015-05-17T21:15:26.807850861 0.152196s warn: Could not turn off filesystem caching for database file: "/home/vagrant/rethinkdb_data/auth_metadata" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2015-05-17T21:15:26.853669936 0.198015s info: Listening for intracluster connections on port 29015
+2015-05-17T21:15:26.864071958 0.208417s info: Listening for client driver connections on port 28015
+2015-05-17T21:15:26.866087636 0.210433s info: Listening for administrative HTTP connections on port 8080
+2015-05-17T21:15:26.870221209 0.214566s info: Listening on addresses: 127.0.0.1, 192.168.10.10, 10.0.2.15, ::1, fe80::a00:27ff:fe92:c5f7%2
+2015-05-17T21:15:26.870224029 0.214569s info: Server ready
+2015-05-17T21:16:16.981157703 50.325503s info: Applying data {"machines":{"dea328d8-9860-47a6-8956-f089c403f300":{"name":"vagrant"}}}
+2015-05-17T21:16:25.230800581 58.575146s info: HTTP request throw a schema_mismatch_exc_t with what = invalid name: vagrant-express-rethink
+2015-05-17T21:16:49.833046805 83.177392s info: Applying data {"databases":{"new":{"name":"app"}}}
+2015-05-17T21:18:59.715218167 213.059563s info: Server got SIGINT from pid 0, uid 0; shutting down...
+2015-05-17T21:18:59.716191606 213.060536s info: Shutting down client connections...
+2015-05-17T21:18:59.716346731 213.060692s info: All client connections closed.
+2015-05-17T21:18:59.716348483 213.060693s info: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2015-05-17T21:18:59.716350119 213.060695s info: Storage engine shut down.
+2015-05-17T21:26:24.696926527 0.023254s warn: Parent directory of log file (/home/vagrant/rethinkdb_data/log_file) could not be synced. (Invalid argument)
+2015-05-17T21:26:24.706450006 0.032777s info: Running rethinkdb 1.12.5-0ubuntu1~trusty (GCC 4.8.2)...
+2015-05-17T21:26:24.729558151 0.055886s info: Running on Linux 3.13.0-52-generic x86_64
+2015-05-17T21:26:24.731329114 0.057656s info: Using cache size of 100 MB
+2015-05-17T21:26:24.732981996 0.059309s warn: Cache size does not leave much memory for server and query overhead (available memory: 264 MB).
+2015-05-17T21:26:24.733772047 0.060099s warn: Cache size is very low and may impact performance.
+2015-05-17T21:26:24.736546735 0.062882s info: Loading data from directory /home/vagrant/rethinkdb_data
+2015-05-17T21:26:24.751832272 0.078159s warn: Failed to sync parent directory of "/home/vagrant/rethinkdb_data/metadata" (errno: 22 - Invalid argument). You may encounter data loss in case of a system failure. (Is the file located on a filesystem that doesn't support directory sync? e.g. VirtualBox shared folders)
+2015-05-17T21:26:24.753178442 0.079506s warn: Could not turn off filesystem caching for database file: "/home/vagrant/rethinkdb_data/metadata" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2015-05-17T21:26:24.765611575 0.091938s warn: Failed to sync parent directory of "/home/vagrant/rethinkdb_data/auth_metadata" (errno: 22 - Invalid argument). You may encounter data loss in case of a system failure. (Is the file located on a filesystem that doesn't support directory sync? e.g. VirtualBox shared folders)
+2015-05-17T21:26:24.766399049 0.092726s warn: Could not turn off filesystem caching for database file: "/home/vagrant/rethinkdb_data/auth_metadata" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2015-05-17T21:26:24.781895632 0.108231s info: Listening for intracluster connections on port 29015
+2015-05-17T21:26:24.786943110 0.113270s info: Listening for client driver connections on port 28015
+2015-05-17T21:26:24.787165734 0.113493s info: Listening for administrative HTTP connections on port 8080
+2015-05-17T21:26:24.788926584 0.115257s info: Listening on addresses: 127.0.0.1, 192.168.10.10, 10.0.2.15, ::1, fe80::a00:27ff:fe92:c5f7%2
+2015-05-17T21:26:24.788935760 0.115266s info: Server ready
+2015-05-17T21:27:02.709237660 38.035565s info: Server got SIGINT from pid 0, uid 0; shutting down...
+2015-05-17T21:27:02.711454154 38.037781s info: Shutting down client connections...
+2015-05-17T21:27:02.712563192 38.038890s info: All client connections closed.
+2015-05-17T21:27:02.712565115 38.038892s info: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2015-05-17T21:27:02.712566626 38.038893s info: Storage engine shut down.
+2015-05-17T21:27:47.620773787 0.023150s warn: Parent directory of log file (/home/vagrant/rethinkdb_data/log_file) could not be synced. (Invalid argument)
+2015-05-17T21:27:47.631486446 0.033863s info: Running rethinkdb 1.12.5-0ubuntu1~trusty (GCC 4.8.2)...
+2015-05-17T21:27:47.656539735 0.058916s info: Running on Linux 3.13.0-52-generic x86_64
+2015-05-17T21:27:47.659887933 0.062270s info: Using cache size of 100 MB
+2015-05-17T21:27:47.661571563 0.063948s warn: Cache size does not leave much memory for server and query overhead (available memory: 264 MB).
+2015-05-17T21:27:47.664392419 0.066788s warn: Cache size is very low and may impact performance.
+2015-05-17T21:27:47.664846636 0.067236s info: Loading data from directory /home/vagrant/rethinkdb_data
+2015-05-17T21:27:47.702671390 0.105048s warn: Failed to sync parent directory of "/home/vagrant/rethinkdb_data/metadata" (errno: 22 - Invalid argument). You may encounter data loss in case of a system failure. (Is the file located on a filesystem that doesn't support directory sync? e.g. VirtualBox shared folders)
+2015-05-17T21:27:47.705231947 0.107608s warn: Could not turn off filesystem caching for database file: "/home/vagrant/rethinkdb_data/metadata" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2015-05-17T21:27:47.720164068 0.122540s warn: Failed to sync parent directory of "/home/vagrant/rethinkdb_data/auth_metadata" (errno: 22 - Invalid argument). You may encounter data loss in case of a system failure. (Is the file located on a filesystem that doesn't support directory sync? e.g. VirtualBox shared folders)
+2015-05-17T21:27:47.721273746 0.123650s warn: Could not turn off filesystem caching for database file: "/home/vagrant/rethinkdb_data/auth_metadata" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2015-05-17T21:27:47.738600491 0.140977s info: Listening for intracluster connections on port 29015
+2015-05-17T21:27:47.744304605 0.146694s info: Listening for client driver connections on port 28015
+2015-05-17T21:27:47.745763637 0.148140s info: Listening for administrative HTTP connections on port 9090
+2015-05-17T21:27:47.747608992 0.149985s info: Listening on addresses: 127.0.0.1, 192.168.10.10, 10.0.2.15, ::1, fe80::a00:27ff:fe92:c5f7%2
+2015-05-17T21:27:47.747611457 0.149988s info: Server ready
+2015-05-17T21:30:09.664135215 142.066531s info: Server got SIGINT from pid 0, uid 0; shutting down...
+2015-05-17T21:30:09.665413383 142.067790s info: Shutting down client connections...
+2015-05-17T21:30:09.665604608 142.067981s info: All client connections closed.
+2015-05-17T21:30:09.665606291 142.067982s info: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2015-05-17T21:30:09.665607737 142.067984s info: Storage engine shut down.
+2015-05-17T21:30:14.406415358 0.048644s warn: Parent directory of log file (/home/vagrant/rethinkdb_data/log_file) could not be synced. (Invalid argument)
+2015-05-17T21:30:14.428451247 0.070680s info: Running rethinkdb 1.12.5-0ubuntu1~trusty (GCC 4.8.2)...
+2015-05-17T21:30:14.508385356 0.150614s info: Running on Linux 3.13.0-52-generic x86_64
+2015-05-17T21:30:14.508608236 0.150837s info: Using cache size of 100 MB
+2015-05-17T21:30:14.509065346 0.151328s warn: Cache size does not leave much memory for server and query overhead (available memory: 237 MB).
+2015-05-17T21:30:14.509689900 0.151918s warn: Cache size is very low and may impact performance.
+2015-05-17T21:30:14.509919020 0.152147s info: Loading data from directory /home/vagrant/rethinkdb_data
+2015-05-17T21:30:14.539597866 0.181826s warn: Failed to sync parent directory of "/home/vagrant/rethinkdb_data/metadata" (errno: 22 - Invalid argument). You may encounter data loss in case of a system failure. (Is the file located on a filesystem that doesn't support directory sync? e.g. VirtualBox shared folders)
+2015-05-17T21:30:14.540271433 0.182500s warn: Could not turn off filesystem caching for database file: "/home/vagrant/rethinkdb_data/metadata" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2015-05-17T21:30:14.571071516 0.213300s warn: Failed to sync parent directory of "/home/vagrant/rethinkdb_data/auth_metadata" (errno: 22 - Invalid argument). You may encounter data loss in case of a system failure. (Is the file located on a filesystem that doesn't support directory sync? e.g. VirtualBox shared folders)
+2015-05-17T21:30:14.571269704 0.213498s warn: Could not turn off filesystem caching for database file: "/home/vagrant/rethinkdb_data/auth_metadata" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2015-05-17T21:30:14.624414334 0.266803s info: Listening for intracluster connections on port 29015
+2015-05-17T21:30:14.633028094 0.275256s info: Listening for client driver connections on port 28015
+2015-05-17T21:30:14.636085886 0.278314s info: Listening for administrative HTTP connections on port 9090
+2015-05-17T21:30:14.641341364 0.283570s info: Listening on addresses: 127.0.0.1, 192.168.10.10, 10.0.2.15, ::1, fe80::a00:27ff:fe92:c5f7%2
+2015-05-17T21:30:14.641343653 0.283572s info: Server ready
+2015-05-18T04:22:16.656202932 0.319744s warn: Parent directory of log file (/home/vagrant/rethinkdb_data/log_file) could not be synced. (Invalid argument)
+2015-05-18T04:22:16.681289634 0.344831s info: Running rethinkdb 1.12.5-0ubuntu1~trusty (GCC 4.8.2)...
+2015-05-18T04:22:16.708696329 0.372238s info: Running on Linux 3.13.0-52-generic x86_64
+2015-05-18T04:22:16.710842560 0.374557s info: Using cache size of 100 MB
+2015-05-18T04:22:16.712461013 0.376003s warn: Requested cache size is larger than available memory.
+2015-05-18T04:22:16.713176512 0.376718s warn: Cache size is very low and may impact performance.
+2015-05-18T04:22:16.714146705 0.377688s info: Loading data from directory /home/vagrant/rethinkdb_data
+2015-05-18T04:22:16.730025595 0.393567s warn: Failed to sync parent directory of "/home/vagrant/rethinkdb_data/metadata" (errno: 22 - Invalid argument). You may encounter data loss in case of a system failure. (Is the file located on a filesystem that doesn't support directory sync? e.g. VirtualBox shared folders)
+2015-05-18T04:22:16.732794181 0.396336s warn: Could not turn off filesystem caching for database file: "/home/vagrant/rethinkdb_data/metadata" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2015-05-18T04:22:16.760544470 0.424085s warn: Failed to sync parent directory of "/home/vagrant/rethinkdb_data/auth_metadata" (errno: 22 - Invalid argument). You may encounter data loss in case of a system failure. (Is the file located on a filesystem that doesn't support directory sync? e.g. VirtualBox shared folders)
+2015-05-18T04:22:16.761587785 0.425131s warn: Could not turn off filesystem caching for database file: "/home/vagrant/rethinkdb_data/auth_metadata" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2015-05-18T04:22:16.776024232 0.439571s error: Could not bind to cluster port: The address at localhost:29015 is reserved or already in use.

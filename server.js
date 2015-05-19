@@ -45,8 +45,8 @@ app.use(function(req, res, next) {
 	routerTest.route('/')
 
 		.get(function(req, res) {
-			Models.Test.getAll(function(results) {
-				res.status(200).send(results)
+			Models.Test.getAll(function(users) {
+				res.status(200).send(users)
 			})
 		})
 
@@ -54,8 +54,8 @@ app.use(function(req, res, next) {
 			Models.Test.create({
 				name: req.param('name'),
 				title: req.param('title')
-			}, function(results) {
-				res.status(200).send(results)
+			}, function(result) {
+				res.status(200).send(result)
 			})
 		});
 
@@ -68,14 +68,14 @@ app.use(function(req, res, next) {
 		})
 
 		.put(function(req, res) {
-			Models.Test.update(req.params.user_id, req.body, function(user) {
-				res.status(200).send(user)
+			Models.Test.update(req.params.user_id, req.body, function(result) {
+				res.status(200).send(result)
 			})
 		})
 
 		.delete(function(req, res) {
-			Models.Test.delete(req.params.user_id, function(user) {
-				res.status(200).send(user)
+			Models.Test.delete(req.params.user_id, function(result) {
+				res.status(200).send(result)
 			})
 		});
 

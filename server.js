@@ -26,18 +26,6 @@ app.use(function(req, res, next) {
 
 //Routes ======
 
-	//Example Route ===
-
-	var routerExample = express.Router();
-
-	routerExample.route('/')
-
-		.get(function(req, res) {
-			res.status(200).send({ message: "Hello!" });
-		});
-
-	app.use('/', routerExample);
-
 	//Test Route ===
 
 	var routerTest = express.Router();
@@ -80,10 +68,6 @@ app.use(function(req, res, next) {
 		});
 
 	app.use('/test', routerTest);
-
-//Starting our database first ======
-
-var exec = require('child_process').exec;
 
 //Starting our app ======
 

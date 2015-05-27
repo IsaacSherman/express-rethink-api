@@ -1,6 +1,6 @@
 {
   "name": "vagrant-express-rethink",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Easy provisioning to get your next Vagrant + Node.js Express.js + RethinkDB project up and going.",
   "main": "server.js",
   "scripts": {

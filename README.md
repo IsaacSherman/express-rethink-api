@@ -1,4 +1,5 @@
 # express-rethink-api
+Super fast way to getting a token authenticated JSON RESTful API up and going. Uses Node.js, Express.js, and RethinkDB.
 
 ## Notes
 * RethinkDB's administration panel typically runs on port 8080. However, HTTP proxies typically use 8080, and so we've configured RethinkDB's admin panel to run on port 9090.

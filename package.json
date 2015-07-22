@@ -1,7 +1,7 @@
 {
   "name": "express-rethink-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Super fast way to getting a token authenticated JSON RESTful API up and going. Uses Node.js, Express.js, and RethinkDB.",
   "main": "server.js",
   "scripts": {
     "test": "node server.js"

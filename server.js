@@ -15,59 +15,133 @@ var app = express();
 
 //App Middleware ======
 
+app.set('token name', Config.App.tokenName);
+
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(bodyParser.json({ type: 'application/json' }));
 
 app.use(function(req, res, next) {
+
 	res.header('Access-Control-Allow-Origin', '*');
 	next();
+
 });
 
-//Routes ======
+//API ======
 
-	//Test Route ===
+	//Authentication ===
 
-	var routerTest = express.Router();
+	var requireAuthentication = function(req, res, next) {
 
-	routerTest.route('/')
+		var token = req.get( app.get('token name') );
 
-		.get(function(req, res) {
-			Models.Test.getAll(function(users) {
-				res.status(200).send(users)
-			})
-		})
+		if (!token) { 
+			return res.status(401).send({ message: app.get('token name') + ' header was not found!' }); 
+		}
 
-		.post(function(req, res) {
-			Models.Test.create({
-				name: req.param('name'),
-				title: req.param('title')
-			}, function(result) {
-				res.status(200).send(result)
-			})
+		Models.Users.getByToken(token, function(response) {
+
+			if (!response.data.user) {
+				return res.status(401).send({ statusCode: 401, message: app.get('token name') + ' token has been invalidated! Token could have expired, but more likely the associated user does not exist anymore.' }); 
+			}
+
+			req.user = response.data.user;
+			next();
+
 		});
 
-	routerTest.route('/:user_id')
+	};
+
+	app.post('/v1/register', function(req, res) {
+
+		Models.Users.getByUsername(req.param('username'), function(response) {
+
+			if (response.data.user) {
+				return res.status(400).send({ statusCode: 400, message: 'Username already registered! Please select another username.' }); 
+			}
+
+			Models.Users.createWithUsernameAndPassword(req.param('username'), req.param('password'), function(response) {
+			
+				res.status(response.statusCode).send(response);
+			
+			});
+
+		});
+
+	});
+
+	app.post('/v1/login', function(req, res) {
+
+		Models.Users.getByUsernameAndPassword(req.param('username'), req.param('password'), function(response) {
+
+			if (!response.data.user) {
+				response.message = 'Could not find that user! Please check username and password';
+				return res.status(response.statusCode).send(response);
+			}
+
+			req.user = response.data.user;
+
+			Models.Users.assignTokenToUser(req.user.id, function(response) {
+
+				if (response.error) {
+					return res.status(response.statusCode).send(response);
+				}
+
+				response.data.user = req.user;
+				response.data.token = {
+					header: app.get('token name'),
+					value: response.data.token
+				};
+				response.message = 'You are now logged in!';
+				res.status(response.statusCode).send(response);
+
+			});
+
+		});
+
+	});
+
+	app.use('/v1/*', requireAuthentication);
+
+	//API - Users
+
+	var routerUserApi = express.Router();
+
+	routerUserApi.route('/user')
 
 		.get(function(req, res) {
-			Models.Test.get(req.params.user_id, function(user) {
-				res.status(200).send(user)
-			})
+		
+			res.status(200).send({ data: { user: req.user } });
+		
 		})
 
 		.put(function(req, res) {
-			Models.Test.update(req.params.user_id, req.body, function(result) {
-				res.status(200).send(result)
-			})
+			
+			/*
+			We have strict parameter whitelisting in our users model -- this is
+			why we can safely pass the entire req.body in our model method!
+			*/
+
+			Models.Users.update(req.user.id, req.body, function(response) {
+
+				res.status(response.statusCode).send(response);
+
+			});
+		
 		})
 
 		.delete(function(req, res) {
-			Models.Test.delete(req.params.user_id, function(result) {
-				res.status(200).send(result)
-			})
+
+			Models.Users.delete(req.user.id, function(response) {
+
+				res.status(response.statusCode).send(response);
+
+			});
+
 		});
 
-	app.use('/test', routerTest);
+	app.use('/v1', routerUserApi);
 
 //Starting our app ======
 

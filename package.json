@@ -1,20 +1,21 @@
 {
-  "name": "vagrant-express-rethink",
-  "version": "1.0.1",
-  "description": "Easy provisioning to get your next Vagrant + Node.js Express.js + RethinkDB project up and going.",
+  "name": "express-rethink-api",
+  "version": "1.0.0",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/haseebnqureshi/vagrant-express-rethink.git"
+    "url": "https://github.com/haseebnqureshi/express-rethink-api.git"
   },
   "author": "Haseeb Qureshi",
   "license": "All rights reserved.",
   "dependencies": {
     "body-parser": "^1.9.0",
     "express": "~4.8.4",
-    "rethinkdb": "^2.0.0-2"
+    "rethinkdb": "^2.0.0-2",
+    "underscore": "^1.8.3"
   }
 }
